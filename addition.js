@@ -35,9 +35,9 @@ const runWasmAdd = async () => {
   const wasmModule = await wasmBrowserInstantiate("./addition.wasm");
 
   // Call the Add function export from wasm, save the result
-  const addResult = wasmModule.instance.exports.add(24, 24);
+  const addResult = wasmModule.instance.exports.add(42, 76);
 
   // Set the result onto the body
-  document.body.textContent = `The result of the addition addResult: ${addResult}`;
+  document.body.textContent = `The result of the addition: ${addResult}`;
 };
 runWasmAdd();
